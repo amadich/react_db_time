@@ -21,7 +21,8 @@ const Accunets = require("./models/accunets");
 app.use(cors());
 app.use(express.json());
 ```
-![image](https://user-images.githubusercontent.com/74735976/213483887-fff7d9f0-932c-44e5-80cf-c5ed73b3f0cf.png)
+![image](https://user-images.githubusercontent.com/74735976/213485565-08c92a63-4462-4565-bb0e-18aa3cb78f16.png)
+
 
 dont forget porting your server 
 ```js
@@ -31,6 +32,33 @@ app.listen(3001, () => {console.log("We are connected with port 3001 ...");})
 ```js
 mongoose.connect("Url" , {useNewUrlParser: true} );
 ```
+
+what about react script ?
+here is => 
+```js
+ const [user, setUser] = useState("");
+        const [pwd , setPwd] = useState("");
+
+        const [user1, setUser1] = useState("");
+        const [pwd1 , setPwd1] = useState("");
+
+      
+
+        // login
+           const loginacc = () => {
+                Axios.post("http://localhost:3001/readacc", {user1: user1,pwd1:pwd1}).then(() => {console.log("Success")})
+                setTimeout(() => {
+                    Axios.post("http://localhost:3001/readacc").then((response) => {console.log(response.data)})
+                }, 1000);
+           }
+
+        // rejister
+        const rejme = () => {
+            Axios.post("http://localhost:3001/acc", {user: user,pwd:pwd}).then(() => {console.log("Success")})
+        }
+```
+
+![image](https://user-images.githubusercontent.com/74735976/213483887-fff7d9f0-932c-44e5-80cf-c5ed73b3f0cf.png)
 
 What about Insert select accunets ?
 here is : 
