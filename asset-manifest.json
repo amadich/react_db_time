@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react_db_time/static/css/main.51ddb34c.css",
+    "main.js": "/react_db_time/static/js/main.acc49c33.js",
+    "static/media/backgroundbottom.png": "/react_db_time/static/media/backgroundbottom.5f31f92c7e6091e2f6a0.png",
+    "static/media/adventuretime-characters.png": "/react_db_time/static/media/adventuretime-characters.340d81e30f6cfd87a666.png",
+    "index.html": "/react_db_time/index.html",
+    "main.51ddb34c.css.map": "/react_db_time/static/css/main.51ddb34c.css.map",
+    "main.acc49c33.js.map": "/react_db_time/static/js/main.acc49c33.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51ddb34c.css",
+    "static/js/main.acc49c33.js"
+  ]
+}
