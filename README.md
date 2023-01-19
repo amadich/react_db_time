@@ -105,6 +105,55 @@ app.post("/readacc" , (req,res) => {
     })
 })
 ```
+#Final Script : 
+```js
+
+// mongoose express react node = mern
+const express = require("express");
+const app = express();
+const mongoose = require("mongoose");
+const cors = require("cors");
+const port = 3001;
+
+const Accunets = require("./models/accunets");
+
+
+app.use(cors());
+app.use(express.json());
+
+
+mongoose.connect("mongodb+srv://user:<password>@host.***.mongodb.net/<dbname>?retryWrites=true&w=majority")
+
+app.post("/api/rej" , async (req , res) => {
+    const name = req.body.name;
+    const email = req.body.email;
+    const pwd = req.body.pwd;
+    const acc = new Accunets({name: name, email: email, password: pwd});
+    try {
+        await acc.save();
+        res.send(acc);
+    }catch(err) {
+        console.log(err);
+    }
+})
+
+app.post("/api/readrej", async (req ,res) => {
+    const email = req.body.email;
+    const pwd = req.body.pwd;
+    
+    Accunets.findOne({email : email , password: pwd} , (err,result) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.send(result);
+        }
+    })
+})
+
+app.listen(port, () => console.log(`We are listening in ${port} ...`));
+
+```
 # Thanks 🌹 . . . 
 dont forget to add start ⭐
 #
